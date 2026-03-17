@@ -8,6 +8,9 @@ function loginUser(string $username, string $password): ?array
 
     foreach ($users as $user) {
         if (strcasecmp($user['username'], $username) === 0 && password_verify($password, $user['password'])) {
+            if (isset($user['pending']) && $user['pending']) {
+                return null; // Pending users cannot log in
+            }
             return $user;
         }
     }
@@ -45,4 +48,64 @@ function logoutUser(): void
         );
     }
     session_destroy();
+}
+
+function updateUser(string $username, array $updatedData): bool
+{
+    $users = loadUsers();
+    foreach ($users as &$user) {
+        if (strcasecmp($user['username'], $username) === 0) {
+            $user = array_merge($user, $updatedData);
+            saveUsers($users);
+            return true;
+        }
+    }
+    return false;
+}
+
+function deleteUser(string $username): bool
+{
+    $users = loadUsers();
+    foreach ($users as $key => $user) {
+        if (strcasecmp($user['username'], $username) === 0) {
+            $users[$key]['deleted'] = true; // Mark as deleted
+            saveUsers($users);
+            return true;
+        }
+    }
+    return false;
+}
+
+function acceptUser(string $username): bool
+{
+    return updateUser($username, ['pending' => false]);
+}
+
+function declineUser(string $username): bool
+{
+    return deleteUser($username); // Or mark as declined, but for simplicity, delete
+}
+
+function getUserByUsername(string $username): ?array
+{
+    $users = loadUsers();
+    foreach ($users as $user) {
+        if (strcasecmp($user['username'], $username) === 0) {
+            return $user;
+        }
+    }
+    return null;
+}
+
+function retrieveUser(string $username): bool
+{
+    $users = loadUsers();
+    foreach ($users as $key => $user) {
+        if (strcasecmp($user['username'], $username) === 0 && isset($user['deleted']) && $user['deleted']) {
+            $users[$key]['deleted'] = false; // Mark as active
+            saveUsers($users);
+            return true;
+        }
+    }
+    return false;
 }

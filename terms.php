@@ -89,7 +89,7 @@
     <h2>6. Intellectual Property</h2>
     <p>eSerbisyo © 2025 by:<br>
     - Baniqued, Bugayong, Francisco, Mante, Manuel<br>
-    - College of Computer and Information Sciences, PUP</p>
+    - Polytechnic University of the Philippines - San Juan</p>
     <p>All rights reserved. The system may not be copied, modified, or reproduced without proper acknowledgment.</p>
 
     <h2>7. Disclaimer of Warranties</h2>

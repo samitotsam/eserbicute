@@ -1,3 +1,110 @@
+.sidebar-logout-wrap {
+  margin-top: 2.5rem;
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-align: left;
+}
+/* Sidebar and Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(145deg, var(--brand), var(--brand-dark));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  box-shadow: 2px 0 18px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+}
+.sidebar-header {
+  padding: 2rem 1.5rem 1rem 1.5rem;
+}
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.2rem;
+}
+.sidebar .tagline {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav li {
+  margin: 0.5rem 0;
+}
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 0.7em 1.5em;
+  border-radius: 18px 0 0 18px;
+  transition: background 0.18s;
+}
+.sidebar-nav a:hover, .sidebar-nav .sidebar-logout:hover {
+  background: rgba(255,255,255,0.13);
+}
+.sidebar-logout {
+  color: #ffd6d6;
+}
+.sidebar-user {
+  margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+  font-size: 0.98rem;
+  color: #e0f7ea;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 1.2rem;
+}
+.dashboard-main {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2.5rem 2rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    min-height: unset;
+    flex-direction: row;
+    align-items: flex-start;
+    position: static;
+    box-shadow: none;
+  }
+  .sidebar-header, .sidebar-user {
+    display: none;
+  }
+  .sidebar-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .sidebar-nav a {
+    border-radius: 18px;
+    padding: 0.7em 1em;
+    font-size: 1rem;
+  }
+  .dashboard-main {
+    padding: 1.2rem;
+  }
+}
 /*
   eSerbisyo - Green Theme
   A simple, clean responsive layout inspired by the provided design.
@@ -216,9 +323,9 @@ select:focus {
 
 .btn {
   border: none;
-  border-radius: 999px;
-  padding: 0.95rem 1.25rem;
-  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
@@ -445,4 +552,217 @@ select:focus {
 
 h2 {
   text-align: center;
+}
+
+/* Manage Accounts Page Styles */
+
+.add-user {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.add-user h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+.users-list {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.users-list h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-table th,
+.users-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(15, 42, 26, 0.1);
+}
+
+.users-table th {
+  background: rgba(29, 122, 82, 0.1);
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+.users-table tbody tr:hover {
+  background: rgba(29, 122, 82, 0.05);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.btn-danger {
+  background: #d9443a;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+/* User Details Styles */
+.user-details {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.user-details h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+.user-details .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.user-details .form-grid > div {
+  padding: 0.75rem;
+  background: rgba(29, 122, 82, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+}
+
+.user-details .form-grid strong {
+  color: var(--brand-dark);
+}
+
+/* Delete User Styles */
+.delete-user {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.delete-user h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+.delete-user p {
+  margin: 1rem 0;
+  color: var(--muted);
+}
+
+.delete-user form {
+  margin-top: 2rem;
+}
+
+.delete-user .btn {
+  margin: 0 0.5rem;
+}
+
+/* Edit User Styles */
+.edit-user {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.edit-user h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+/* Pending Users List Styles */
+.pending-users-list {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 42, 26, 0.1);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.pending-users-list h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+  font-size: 1.5rem;
+}
+
+/* Adjust button sizes */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 100px; /* Set uniform width */
+  height: 40px; /* Set uniform height */
+  line-height: 1.5rem; /* Center text vertically */
+}
+
+.btn-view {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #007BFF;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #FF4D4D;
+  color: white;
+}
+
+.btn-retrieve {
+  background-color: #FFA500;
+  color: white;
+}
+
+/* Align buttons in a row */
+.user-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Ensure dark text on light backgrounds */
+body {
+  color: #333;
+}
+
+.table th, .table td {
+  color: #333;
 }

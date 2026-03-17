@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'email' => $email,
             'accepted_terms' => $acceptedTerms,
             'accepted_privacy' => $acceptedPrivacy,
+            'pending' => true, // Residents need admin approval
         ];
 
         if (registerUser($userData)) {
