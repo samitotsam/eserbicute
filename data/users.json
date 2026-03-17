@@ -60,6 +60,28 @@
         "email": "andrei@gmail.com",
         "accepted_terms": true,
         "accepted_privacy": true,
-        "deleted": true
+        "deleted": false
+    },
+    {
+        "username": "mixbugz@gmail.com",
+        "password": "$2y$10$5CfuoRw/fmGmTSi77ypMuunz.g.b3cNi8kDQPYIUuetA2P7Y/LOtW",
+        "role": "resident",
+        "first_name": "Mayka Atina",
+        "middle_name": "Dela Merced",
+        "last_name": "Arevalo",
+        "suffix": "",
+        "civil_status": "single",
+        "sex": "female",
+        "citizenship": "Filipino",
+        "birth_date": "2005-03-01",
+        "house_address": "57 Magalang St.",
+        "province": "Bataan",
+        "city": "Orani",
+        "barangay": "Poveda Asuncion",
+        "contact_number": "09223334444",
+        "email": "mixbugz@gmail.com",
+        "accepted_terms": true,
+        "accepted_privacy": true,
+        "pending": true
     }
 ]
