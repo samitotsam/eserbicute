@@ -1,0 +1,28 @@
+[
+    {
+        "username": "admin@local",
+        "password": "$2y$10$NWqIIyR.m45gu8aA56GlquLlgHuyU1Weu0vWpy71REFKk8ly/XPMG",
+        "role": "admin"
+    },
+    {
+        "username": "acy121422@gmail.com",
+        "password": "$2y$10$Erib18uQAwikCMb7zE4.WetS95BuLogM.pkSDFebPvUnBHkYXoWmi",
+        "role": "resident",
+        "first_name": "Alaiza Claine",
+        "middle_name": "Torres",
+        "last_name": "Manuel",
+        "suffix": "",
+        "civil_status": "single",
+        "sex": "female",
+        "citizenship": "Filipino",
+        "birth_date": "2004-01-16",
+        "house_address": "13 J. EUSTAQUIO ST BARANGAY PROGRESO SAN JUAN CITY",
+        "province": "Metro Manila",
+        "city": "SAN JUAN",
+        "barangay": "Progreso",
+        "contact_number": "09179059503",
+        "email": "acy121422@gmail.com",
+        "accepted_terms": true,
+        "accepted_privacy": true
+    }
+]
